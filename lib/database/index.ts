@@ -12,6 +12,9 @@ export const connectToDatabase = async () => {
     bufferCommands: false
   })
   cashed.conn = await cashed.promise;
+  if (cashed.conn) {
+    console.log("Rohit Database Connnect Successfully", cashed)
+  }
   return cashed.conn
 
 }
